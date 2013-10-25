@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Fellows Contact Manager</title>
+
+    <!-- Bring In jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Bring In Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Application Styles and Scripts -->
+    <link rel="stylesheet" href="/jsbootcamp.css">
+    <script src="/contactlist.js"></script>
+    <script>
+      $(document).ready(function() {
+        makeContactRowClickable();
+      });
+    </script>
+  </head>
+
+  <body>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Nickname</th>
+          <th>Company</th>
+        </tr>
+      <thead>
+
+      <tbody>
+        {{#each contacts}}
+          <tr data-contact-guid="{{guid}}">
+            <td>{{lastName}}</td>
+            <td>{{firstName}}</td>
+            <td>{{nickname}}</td>
+            <td>{{company}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>
