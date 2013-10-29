@@ -1,3 +1,9 @@
 body {
   padding: 1em 1.5em 1em 1.5em;
 }
+
+header {
+    background-image: url("img/gold_scale.png");
+    padding: 10px;
+    font-weight: bold;
+}

@@ -9,9 +9,21 @@
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Application Styles and Scripts -->
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.10.8/jquery.tablesorter.min.js"></script>
+<script>
+      $(document).ready(function()
+      {
+      $("#contactList").tablesorter( {sortList: [[0,0], [1,0]]} );
+      }
+      );
+</script>
+
+
+      <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
     <script src="/contactlist.js"></script>
     <script>
@@ -22,13 +34,15 @@
   </head>
 
   <body>
-    <table class="table table-hover">
+  <header>Contact List of Wonder</header>
+    <table class="table table-hover tablesorter"  id="contactList">
       <thead>
         <tr>
           <th>Last Name</th>
           <th>First Name</th>
           <th>Nickname</th>
           <th>Company</th>
+            <th>&nbsp;</th>
         </tr>
       <thead>
 
@@ -39,6 +53,7 @@
             <td>{{firstName}}</td>
             <td>{{nickname}}</td>
             <td>{{company}}</td>
+              <td><i class="fa fa-pencil fa-fw"> Edit</i></td>
           </tr>
         {{/each}}
       </tbody>

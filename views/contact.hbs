@@ -9,9 +9,12 @@
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <!-- Added files -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <!-- Application Styles and Scripts -->
+      <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
   </head>
 
@@ -22,6 +25,7 @@
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="{{firstName}}"/>
+              <div class="error-msg" style="display:none">Please fill out this field</div>
           </div>
 
           <div class="form-group">
@@ -48,5 +52,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>
+    <script src="/contactlist.js"></script>
+
   </body>
 </html>
