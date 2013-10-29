@@ -103,7 +103,7 @@ app.post("/contacts/:guid", function(req, res) {
   if(record) {
     var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
     _.extend(record, formValues);
-    if(record.nickname = "") {
+    if(record.nickname === "") {
       record.nickname = record.firstName;
     }
     res.redirect("/contacts");
