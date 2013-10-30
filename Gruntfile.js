@@ -1,36 +1,39 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
 
-      jshint: {
-          files: ['app.js']
-      },
-      copy: {
-          main: {
-              files: [
+        jshint: {
+            files: ['app.js']
+        },
+        copy: {
+            main: {
+                files: [{
+                    src: ['bower_components/**'],
+                    dest: 'public/'
+                } // includes files in path
+                ]
+            }
+        },
+        clean: ["public/bower_components/**"]
 
-                  {src: ['bower_components/**'], dest: 'public/'} // includes files in path
-              ]
-          }
-      }
-
-  });
+    });
 
 
-grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
 
-// copy
-grunt.loadNpmTasks('grunt-contrib-copy');
+    // copy
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-// Default task(s).
-grunt.registerTask('default', ['jshint', 'copy']);
+    //clean
+    grunt.loadNpmTasks('grunt-contrib-clean');
+
+    // Default task(s).
+    grunt.registerTask('default', ['clean', 'copy']);
 
 
 };
 
 // https://npmjs.org/package/grunt-contrib-jshint
-
-
