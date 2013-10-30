@@ -16,7 +16,14 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        clean: ["public/bower_components/**"]
+        clean: ["public/bower_components/**"],
+        phantom: {
+            options: {
+                port: 5555
+            },
+            cucumber: {
+            }
+        }
 
     });
 
@@ -30,8 +37,14 @@ module.exports = function (grunt) {
     //clean
     grunt.loadNpmTasks('grunt-contrib-clean');
 
+    grunt.loadNpmTasks('grunt-mocha-test');
+
+    grunt.loadNpmTasks('grunt-phantom');
+
+ 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'copy']);
+   // grunt.registerTask('default', ['clean', 'copy']);
+    grunt.registerTask('default', ['phantom']);
 
 
 };
