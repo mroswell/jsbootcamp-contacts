@@ -96,6 +96,17 @@ app.get("/contacts/:guid", function(req, res) {
   }
 });
 
+app.get("/profile/:guid", function(req, res) {
+    var guid = req.param("guid"),
+        record = _.findWhere(db, {guid: guid});
+
+    if(record) {
+        res.render("profile", {contact: record});
+    } else {
+        res.send("Sorry, the guid " + guid + " doesn't exist in the DB.");
+    }
+});
+
 app.post("/contacts/:guid", function(req, res) {
   var guid = req.param("guid"),
       record = _.findWhere(db, {guid: guid});

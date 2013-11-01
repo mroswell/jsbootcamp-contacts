@@ -1,0 +1,6 @@
+package.json, gruntfile.js, bower.json
+step 1: run npm install grunt, bower, and grunt plugins
+step 2: type grunt, it reads Gruntfile.js, parses it, evaluates what needs to happen
+step 3: grunt-bower, so, I'm going to execute bower, and bower reads bower.json and installs mocha
+alternative: connect...
+INSTALL mocha.js, mocha.css

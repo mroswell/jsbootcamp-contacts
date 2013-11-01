@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Fellows Contact Manager</title>
+
+    <!-- Bring In jQuery -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+
+    <!-- Bring In Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <!-- Added files -->
+
+      <!-- Application Styles and Scripts -->
+    <link rel="stylesheet" href="/jsbootcamp.css">
+  </head>
+
+  <body>
+    <div>
+        {{#with contact}}
+          <div class="header">
+           {{firstName}} {{lastName}}  {{#if Nickname}} (a.k.a. {{nickname}} ) {{/if}}
+          </div>
+
+
+          <div>
+          <p>Works for: {{company}}</p>
+          <p>Contact {{firstName}} at <a href="mailto:{{email}}">{{email}}</a></p>
+          </div>
+
+        {{/with}}
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    <script src="/contactlist.js"></script>
+
+  </body>
+</html>

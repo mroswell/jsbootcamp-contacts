@@ -17,14 +17,31 @@ module.exports = function (grunt) {
             }
         },
         clean: ["public/bower_components/**"],
-        phantom: {
+        //phantom: {
+        //    options: {
+        //        port: 5555
+        //    },
+        //    cucumber: {
+        //    }
+        //},
+        //mochaTest: {
+        //    test: {
+        //       options: {
+        //            reporter: 'spec'
+        //        },
+        //        src: ['test/**/*.js']
+        //    }
+        //},
+        //mocha: {
+        //    index:['test/test.js']
+        //}
+        mocha_phantomjs: {
+            all: ['test/**/*.html'],
             options: {
-                port: 5555
-            },
-            cucumber: {
+                reporter: "xunit",
+                output: "./mocha_result.xml"
             }
         }
-
     });
 
 
@@ -37,14 +54,16 @@ module.exports = function (grunt) {
     //clean
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.loadNpmTasks('grunt-mocha-test');
+   // grunt.loadNpmTasks('grunt-mocha');
 
-    grunt.loadNpmTasks('grunt-phantom');
+   // grunt.loadNpmTasks('grunt-phantom');
 
- 
+    grunt.loadNpmTasks('grunt-mocha-phantomjs');
+
     // Default task(s).
    // grunt.registerTask('default', ['clean', 'copy']);
-    grunt.registerTask('default', ['phantom']);
+    grunt.registerTask('default', ['mocha_phantomjs']);
+    grunt.registerTask('test', ['mocha_phantomjs']);
 
 
 };
