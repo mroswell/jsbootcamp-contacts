@@ -19,7 +19,7 @@
 
   <body>
     <div>
-        {{#with contact}}
+        {{#with profile}}
           <div class="header">
            {{firstName}} {{lastName}}  {{#if Nickname}} (a.k.a. {{nickname}} ) {{/if}}
           </div>
@@ -32,7 +32,6 @@
 
         {{/with}}
 
-        <button type="submit" class="btn btn-default">Submit</button>
     </div>
     <script src="/contactlist.js"></script>
 

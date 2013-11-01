@@ -28,7 +28,8 @@ var db = [
     lastName: "Simpson",
     nickname: "Homer",
     company: "Springfield Nuclear Powerplant",
-    email: "hsimpson74@yahoo.com"
+    email: "hsimpson74@yahoo.com",
+    address: ""
   },
   {
     guid: "a9816058-5e20-4e19-be7a-b9ec320a7a91",
@@ -36,7 +37,8 @@ var db = [
     lastName: "Simpson",
     nickname: "Marge",
     company: "",
-    email: "funmom1337@hotmail.com"
+    email: "funmom1337@hotmail.com",
+      address: ""
   },
   {
     guid: "ba029c24-2229-4439-a280-452bead4f176",
@@ -44,7 +46,8 @@ var db = [
     lastName: "Albertson",
     nickname: "Comic Book Guy",
     company: "The Android's Dungeon & Baseball Card Shop",
-    email: "treknerk1012@comcast.net"
+    email: "treknerk1012@comcast.net",
+      address: ""
   },
   {
     guid: "5344717e-5433-49ca-9b71-5fc26ad86abc",
@@ -52,7 +55,8 @@ var db = [
     lastName: "Burns",
     nickname: "Monty",
     company: "Springfield Nuclear Powerplant",
-    email: ""
+    email: "",
+    address: ""
   },
   {
     guid: "0e33a96d-a16c-43e2-be5e-1698393e6dbb",
@@ -60,7 +64,8 @@ var db = [
     lastName: "Quimby",
     nickname: "Diamond Joe",
     company: "Mayor of Springfield",
-    email: "jquimby@springfield.gov"
+    email: "jquimby@springfield.gov",
+    address: ""
   },
 
     {
@@ -69,7 +74,8 @@ var db = [
         lastName: "Child",
         nickname: "Peace",
         company: "Love",
-        email: "fchild@peace.gov"
+        email: "fchild@peace.gov",
+        address: ""
     }
 ];
 
@@ -79,6 +85,11 @@ var db = [
 // care of everything else for us.
 app.get("/", function(req, res) {
   res.redirect("/contacts");
+});
+
+
+app.get("/testing", function(req, res) {
+    res.redirect("http://google.com");
 });
 
 app.get("/contacts", function(req, res) {
@@ -101,7 +112,7 @@ app.get("/profile/:guid", function(req, res) {
         record = _.findWhere(db, {guid: guid});
 
     if(record) {
-        res.render("profile", {contact: record});
+        res.render("profile", {profile: record});
     } else {
         res.send("Sorry, the guid " + guid + " doesn't exist in the DB.");
     }
