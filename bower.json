@@ -20,7 +20,8 @@
     "raphael": "~2.1.2",
     "bootstrap": "~3.0.0",
     "jquery.ui": "~1.10.3",
-    "addresspicker": "*"
+    "addresspicker": "*",
+    "leaflet": "~0.6.4"
   },
   "devDependencies": {
     "chai": "~1.8.1"
