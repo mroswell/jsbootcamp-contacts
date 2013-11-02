@@ -4,6 +4,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        nodemon: {
+            dev: {}
+        },
+
         jshint: {
             files: ['app.js']
         },
@@ -17,6 +21,20 @@ module.exports = function (grunt) {
             }
         },
         clean: ["public/bower_components/**"],
+
+
+        watch: {
+            options: {
+                nospawn: true
+            },
+
+            livereload: {
+                options: {
+                    livereload: 3000
+                },
+                files: ['./app.js']
+            }
+        },
         //phantom: {
         //    options: {
         //        port: 5555
@@ -60,10 +78,19 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-mocha-phantomjs');
 
+    //autowatch
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
+    //nodemon (alternative to autowatch)
+
+    grunt.loadNpmTasks('grunt-nodemon');
+
     // Default task(s).
    // grunt.registerTask('default', ['clean', 'copy']);
     grunt.registerTask('default', ['mocha_phantomjs']);
     grunt.registerTask('test', ['mocha_phantomjs']);
+    grunt.registerTask('reload', ['mocha-contrib-watch']);
+
 
 
 };

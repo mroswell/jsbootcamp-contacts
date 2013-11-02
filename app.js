@@ -17,7 +17,7 @@ var app = express()
             .use(express.bodyParser());
 
 
-// This is our in memory database to use for this bootstraped app. This
+// This is our in memory database to use for this bootstrapped app. This
 // is typically stored in an external system like redis, postgresql or
 // mongodb. We store it here to make the sample application easier to
 // run.
@@ -52,9 +52,9 @@ var db = [
   {
     guid: "5344717e-5433-49ca-9b71-5fc26ad86abc",
     firstName: "Charles Montgomery",
-    lastName: "Burns",
+    lastName: "Jones",
     nickname: "Monty",
-    company: "Springfield Nuclear Powerplant",
+    company: "Springfield Solar Power",
     email: "",
     address: ""
   },
@@ -74,7 +74,7 @@ var db = [
         lastName: "Child",
         nickname: "Peace",
         company: "Love",
-        email: "fchild@peace.gov",
+        email: "flowerchild@peace.gov",
         address: ""
     }
 ];

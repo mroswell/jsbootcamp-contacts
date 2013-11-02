@@ -14,13 +14,14 @@
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.10.8/jquery.tablesorter.min.js"></script>
-<script>
+    <script>
       $(document).ready(function()
       {
       $("#contactList").tablesorter( {sortList: [[0,0], [1,0]]} );
       }
       );
-</script>
+    </script>
+
 
 
       <!-- Application Styles and Scripts -->
@@ -42,7 +43,8 @@
           <th>First Name</th>
           <th>Nickname</th>
           <th>Company</th>
-            <th>&nbsp;</th>
+          <th>Address</th>
+          <th>&nbsp;</th>
         </tr>
       <thead>
 
@@ -53,7 +55,8 @@
             <td>{{firstName}}</td>
             <td>{{nickname}}</td>
             <td>{{company}}</td>
-              <td><i class="fa fa-pencil fa-fw"> Edit</i></td>
+            <td>{{address}}</td>
+            <td><i class="fa fa-pencil fa-fw"> Edit</i></td>
           </tr>
         {{/each}}
       </tbody>
