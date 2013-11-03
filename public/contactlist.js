@@ -1,12 +1,14 @@
 
 
 function makeEmailIconClickable() {
-  $(".table > tbody > tr .edit").click(function() {
+    //tried to limit click to email icon. That was successful
+    // but this pointed to a null guid. couldn't fix, so reverted function.
+  $(".table > tbody > tr").click(function() {
     var newUrl = window.location.href;
     if(newUrl.charAt(newUrl.length) != "/") {
       newUrl = newUrl + "/";
     }
-    newUrl = newUrl + $(this).parent().data("contact-guid");
+    newUrl = newUrl + $(this).data("contact-guid");
     window.location.href = newUrl;
   });
 }

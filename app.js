@@ -6,7 +6,7 @@ var path = require("path"),
     _ = require("underscore");
 
 
-// Our sample application uses the express framework to abstarct away
+// Our sample application uses the express framework to abstract away
 // the raw HTTP concerns. This block creates an instance of the express
 // server and sets configuration related to our static file server and
 // the handlebar template engine.
@@ -24,10 +24,10 @@ var app = express()
 var db = [
   {
     guid: "c214d676-a056-4e77-914c-dfa96e5c93b8",
-    firstName: "Homer",
+    firstName: "Homer G.",
     lastName: "Simpson",
     nickname: "Homer",
-    company: "Springfield Nuclear Powerplant",
+    company: "Springfield Nuclear Power Plant",
     email: "hsimpson74@yahoo.com",
     address: ""
   },
@@ -42,7 +42,7 @@ var db = [
   },
   {
     guid: "ba029c24-2229-4439-a280-452bead4f176",
-    firstName: "Jeff",
+    firstName: "Jeff Q.",
     lastName: "Albertson",
     nickname: "Comic Book Guy",
     company: "The Android's Dungeon & Baseball Card Shop",
@@ -54,7 +54,7 @@ var db = [
     firstName: "Charles Montgomery",
     lastName: "Jones",
     nickname: "Monty",
-    company: "Springfield Solar Power",
+    company: "Springfield Solarplex Power",
     email: "",
     address: ""
   },

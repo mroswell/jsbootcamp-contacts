@@ -4,9 +4,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        nodemon: {
-            dev: {}
-        },
+       // nodemon: {
+       //     dev: {}
+       // },
 
         jshint: {
             files: ['app.js']
@@ -22,19 +22,6 @@ module.exports = function (grunt) {
         },
         clean: ["public/bower_components/**"],
 
-
-        watch: {
-            options: {
-                nospawn: true
-            },
-
-            livereload: {
-                options: {
-                    livereload: 3000
-                },
-                files: ['./app.js']
-            }
-        },
         //phantom: {
         //    options: {
         //        port: 5555
@@ -58,6 +45,21 @@ module.exports = function (grunt) {
             options: {
                 reporter: "xunit",
                 output: "./mocha_result.xml"
+            }
+        },
+        watch: {
+            options: {
+                nospawn: true
+            },
+
+            restart: {
+                files: ['app.js'],
+                tasks: ['server']
+            },
+            livereload: {
+                options: {
+                    livereload: 3000
+                }
             }
         }
     });
@@ -90,6 +92,10 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['mocha_phantomjs']);
     grunt.registerTask('test', ['mocha_phantomjs']);
     grunt.registerTask('reload', ['mocha-contrib-watch']);
+    grunt.registerTask('server', 'Start app.js', function(){
+        grunt.log.writeln('starting app.js server');
+        require('./app.js');
+    });
 
 
 
