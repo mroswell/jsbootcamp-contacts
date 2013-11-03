@@ -46,9 +46,18 @@
                       "Lazy", "Lethargic", "Listless", "Lonely", "Loved", "Mad", "Melancholy", "Mellow", "Mischievous", "Moody", "Morose",
                       "Naughty", "Nerdy", "Not Specified", "Numb", "Okay", "Optimistic", "Peaceful", "Pessimistic", "Pissed off", "Pleased", "Predatory", "Quixotic",
                       "Recumbent", "Refreshed", "Rejected", "Rejuvenated", "Relaxed", "Relieved", "Restless", "Rushed",
-                      "Sad", "Satisfied", "Shocked", "Sick", "Silly", "Sleepy", "Smart", "Stressed", "Surprised", "Sympathetic", "Thankful", "Tired", "Touched", "Uncomfortable", "Weird"                  ]
+                      "Sad", "Satisfied", "Shocked", "Sick", "Silly", "Sleepy", "Smart", "Stressed", "Surprised", "Sympathetic",
+                      "Thankful", "Tired", "Touched", "Uncomfortable", "Weird"                  ]
               };
-              $('input[name="mood"]' ).autocomplete(autoOpts);
+
+              var moodselect =$('input[name="mood"]' );
+             moodselect.autocomplete(autoOpts);
+
+              moodselect.blur(function() {
+                  $(this).css('background','red' );
+          });
+
+
           });
       </script>
 
@@ -76,10 +85,13 @@
                   <!--<input type="text" class="form-control address" id="addresspicker" name="address" placeholder="Street  Address" value="{{address}}"/>-->
                   <!--</div>-->
 
-                  <div><br />
+                  <div>
+                      <br />
                       <label for="email">So, how does that make you feel?</label>
-                      <input type="text" class="form-control" id="mood" name="mood" placeholder="Mood" value="{{mood}}"/>
+                      <input type="text" class="form-control" id="mood" name="mood" placeholder="I feel..." value="{{mood}}"/>
                   </div>
+
+
 
                   <button type="submit" class="btn btn-default">Submit</button>
 

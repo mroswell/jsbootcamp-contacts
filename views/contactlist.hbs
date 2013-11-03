@@ -15,10 +15,9 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.10.8/jquery.tablesorter.min.js"></script>
     <script>
-      $(document).ready(function()
-      {
-      $("#contactList").tablesorter( {sortList: [[0,0], [1,0]]} );
-      }
+      $(document).ready(function(){
+                  $("#contactList").tablesorter( {sortList: [[0,0], [1,0]]} );
+              }
       );
     </script>
 
@@ -27,11 +26,11 @@
       <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
     <script src="/contactlist.js"></script>
-    <script>
-      $(document).ready(function() {
-        makeContactRowClickable();
-      });
-    </script>
+      <script>
+          $(document).ready(function() {
+              makeEmailIconClickable();
+          });
+      </script>
   </head>
 
   <body>
@@ -56,7 +55,7 @@
             <td>{{nickname}}</td>
             <td>{{company}}</td>
             <td>{{address}}</td>
-            <td><i class="fa fa-pencil fa-fw"> Edit</i></td>
+            <td><i class="fa fa-pencil fa-fw edit"> Edit</i></td>
           </tr>
         {{/each}}
       </tbody>

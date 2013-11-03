@@ -1,12 +1,12 @@
 
 
-function makeContactRowClickable() {
-  $(".table > tbody > tr").click(function() {
+function makeEmailIconClickable() {
+  $(".table > tbody > tr .edit").click(function() {
     var newUrl = window.location.href;
     if(newUrl.charAt(newUrl.length) != "/") {
       newUrl = newUrl + "/";
     }
-    newUrl = newUrl + $(this).data("contact-guid");
+    newUrl = newUrl + $(this).parent().data("contact-guid");
     window.location.href = newUrl;
   });
 }
