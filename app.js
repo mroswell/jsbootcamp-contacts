@@ -42,7 +42,7 @@ var db = [
   },
   {
     guid: "ba029c24-2229-4439-a280-452bead4f176",
-    firstName: "Jeff Z.",
+    firstName: "Jeff Q.",
     lastName: "Albertson",
     nickname: "Comic Book Guy",
     company: "The Android's Dungeon & Baseball Card Shop",

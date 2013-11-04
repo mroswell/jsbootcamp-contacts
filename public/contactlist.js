@@ -5,7 +5,7 @@ function makeEmailIconClickable() {
     // but this pointed to a null guid. couldn't fix, so reverted function.
   $(".table > tbody > tr").click(function() {
     var newUrl = window.location.href;
-    if(newUrl.charAt(newUrl.length-1) != "/") {
+    if(newUrl.charAt(newUrl.length) != "/") {
       newUrl = newUrl + "/";
     }
     newUrl = newUrl + $(this).data("contact-guid");
