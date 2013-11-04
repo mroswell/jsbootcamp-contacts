@@ -2,31 +2,33 @@ Notes on:
 https://github.com/mroswell/jsbootcamp-contacts
 mroswell@gmail.com
 
-- FAIL: add watch task to grunt such that it restarts the server when app.js is changed.
+- FAIL: Add watch task to grunt such that it restarts the server when app.js is changed.
 - SUCCESS: New handlebars template
 - SUCCESS: Use <#if email> logic in handlebars to exclude email link when email is blank
+- SUCCESS: Install leaflet. Create function to access random map of Europe, Asia, Africa, Australia, while generally excluding (rectangular bounding boxes) representing the Indian and Atlantic Oceans. Just to make sure the map doesn't show up mostly blue ocean.
+- FAIL: the item just above this one is pretty cool... but it would be better to learn how to exclude ocean boundaries or any other selected geography  (i.e based on actual boundaries, and not rectangles)
 - SUCCESS: Install items via bower
+- FAIL: access Leaflet via bower directory. had to use a CDN. Possible insight here: https://github.com/Leaflet/Leaflet/issues/1903
+(i.e.I think there's a chance it just won't work via bower?)
 - SUCCESS: Add local path to template (took me a surprisingly long time, because I forgot for a while to move the file to the /public directory, and to exclude /public from the url, and to prepend /bower_components with a slash.)
 - SUCCESS: Create .bowerc file, and ensure that new files land under /public/bower_components
 - SUCCESS: add jQuery autocomplete mood selecter
 - FAIL: jQuery autocomplete message (while still including the count)
 I want to append text  (" or select a word in the list.") (and remove original period) to "17 results are available, use up and down arrow keys to navigate. "
 The phrase is added to the DOM by autocomplete, and I don't know how to access. I know how to override the messsage, but not while still including the count variable.
-- FAIL: access the autocomplete drop-down div (#ui-id-1) to move it so it's not on top of submit button
-- SUCCESS: add input to new template, and get blur to function
+- FAIL: Access the autocomplete drop-down div (#ui-id-1) to move it so it's not on top of submit button
+- SUCCESS: Add input to new template, and get blur to function
 - FAIL: Access blurred input form content, to be able to conditionally add a class (red color for bad moods, and golden for good)  And do this in a DRY way
-- FAIL get address picker autocomplete to function: FAIL. I love this idea of a universal standardization on address entry…. and I'd love to get this working. It's clear that I need to strengthen my JS troubleshooting skills.
+- FAIL Get address picker autocomplete to function: FAIL. I love this idea of a universal standardization on address entry…. and I'd love to get this working. It's clear that I need to strengthen my JS troubleshooting skills.
 - FAIL: Test code (Even having completed the homework (asserting that 1 === 1) I still don't know how to test my actual code.)
-- FAIL modify the main page click event to link to new profile page via the appropriate: FAIL. "Sorry, the guid null doesn't exist in the DB." when I try to change clickable. Why is it null?
+- FAIL Modify the main page click event to link to new profile page via the appropriate: FAIL. "Sorry, the guid null doesn't exist in the DB." when I try to change clickable. Why is it null?
 - FAIL: Clean code. For instance, when I tried to move my autocomplete into a separate function that could be called inside the document ready, I got ReferenceError: AutoOpts not found.
 
-(When things went haywire, i used the less-than-ideal strategy of repeat Undo.)
-I learned to use git revert hash-id, preceded by git stash. I don't totally understand these. and I also need to get more comfortable with branching.
 
 
 
 
-4. $(this) vs this? (they both look the same in Dev tools, see below:
+ $(this) vs this? (they both look the same in Dev tools, see below:
 
     this FAILs:
 $('input[name="mood"]' ).blur(function() { this.css('background','red' );});
@@ -39,4 +41,19 @@ $('input[name="mood"]' ).blur(function() { $(this).css('background','red' );});
 <input type="text" class="form-control ui-autocomplete-input" id="mood" name="mood" placeholder="I feel..." value autocomplete="off"]]>
 ]
 
+
+
+git notes:
+(Re: git, When things went haywire, I originally used repeat Undo.)
+I learned to use git revert hash-id, preceded by git stash. I don't totally understand these. and I also need to get more comfortable with branching.
+
+- SUCCESS: Learn about git remote -v. Add git public key via:  pbcopy < ~/.ssh/id_rsa.pub
+
+git config --global user.name "Margie Roswell"
+git config --global user.email "mroswell@gmail.com"
+- SEMI-SUCCESS:
+(I didn't quite know how to move origin to my own git repo)
+
+git remote add origing git@github.com:mroswell/jsbootcamp-contacts.git
+(origin already exsisted)
 
