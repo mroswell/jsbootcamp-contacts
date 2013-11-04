@@ -54,7 +54,8 @@
              moodselect.autocomplete(autoOpts);
 
               moodselect.blur(function() {
-                  $(this).css('background','red' );
+
+                  $(this).addClass('moodBad' );
           });
 
 
@@ -74,7 +75,7 @@
 
           <div>
           <p>Works for: {{company}}</p>
-          <p>Contact {{firstName}} at <a href="mailto:{{email}}">{{email}}</a></p>
+          {{#if email}}<p>Contact {{firstName}} at <a href="mailto:{{email}}">{{email}}</a></p>{{/if}}
               <p>{{firstName}} occasionally dreams of spending time here:</p>
               <div id="map"></div>
 
