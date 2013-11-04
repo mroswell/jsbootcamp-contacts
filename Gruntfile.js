@@ -52,14 +52,16 @@ module.exports = function (grunt) {
                 nospawn: true
             },
 
-            restart: {
-                files: ['app.js'],
-                tasks: ['server']
-            },
-            livereload: {
-                options: {
-                    livereload: 3000
-                }
+            //restart: {
+            //    files: ['app.js'],
+            //    tasks: ['server'],
+            //   options: {
+            //        livereload: 3000
+            //    }
+            //},
+            server: {
+                files:  [ './server/**/*, app.js' ],
+                tasks:  [ 'express:dev', 'livereload' ]
             }
         }
     });
