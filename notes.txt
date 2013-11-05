@@ -18,10 +18,10 @@ I want to append text  (" or select a word in the list.") (and remove original p
 The phrase is added to the DOM by autocomplete, and I don't know how to access. I know how to override the messsage, but not while still including the count variable.
 - FAIL: Access the autocomplete drop-down div (#ui-id-1) to move it so it's not on top of submit button
 - SUCCESS: Add input to new template, and get blur to function
-- FAIL: Access blurred input form content, to be able to conditionally add a class (red color for bad moods, and golden for good)  And do this in a DRY way
+- SUCCESS: Access blurred input form content, to be able to conditionally add a class (red color for bad moods, and golden for good)  And do this in a DRY way
 - FAIL Get address picker autocomplete to function: FAIL. I love this idea of a universal standardization on address entry…. and I'd love to get this working. It's clear that I need to strengthen my JS troubleshooting skills.
 - FAIL: Test code (Even having completed the homework (asserting that 1 === 1) I still don't know how to test my actual code.)
-- FAIL Modify the main page click event to link to new profile page via the appropriate: FAIL. "Sorry, the guid null doesn't exist in the DB." when I try to change clickable. Why is it null?
+- FAIL Modify the main page click event to link to new profile page via the appropriate: "Sorry, the guid null doesn't exist in the DB." when I try to change clickable. Why is it null?
 - FAIL: Clean code. For instance, when I tried to move my autocomplete into a separate function that could be called inside the document ready, I got ReferenceError: AutoOpts not found.
 
 
