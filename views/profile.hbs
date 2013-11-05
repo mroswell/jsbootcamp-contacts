@@ -102,6 +102,8 @@
 
 
         {{/with}}
+        
+        <button class="you-are-here">You Are Here</button>
 
     </div>
     <script src="/contactlist.js"></script>
@@ -134,6 +136,15 @@
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
             maxZoom: 18
         }).addTo(map);
+        
+        $(".you-are-here").on("click", function() {
+          var setPosition = function(geo) {
+            var latlng = new L.LatLng(geo.coords.latitude, geo.coords.longitude);
+            var you = new L.marker(latlng).addTo(map);
+            map.setView(latlng, 16);
+          };
+          navigator.geolocation.getCurrentPosition(setPosition);
+        });
 
     </script>
 
