@@ -50,12 +50,16 @@
                       "Thankful", "Tired", "Touched", "Uncomfortable", "Weird"                  ]
               };
 
-              var moodselect =$('input[name="mood"]' );
-             moodselect.autocomplete(autoOpts);
+              var $moodselect =$('input[name="mood"]' );
+              $moodselect.autocomplete(autoOpts);
 
-              moodselect.blur(function() {
-
+              $moodselect.blur(function() {
+                if ($moodselect.val()==="Angry") {
                   $(this).addClass('moodBad' );
+                } else if ($moodselect.val()==="Accomplished") {
+                    $(this).addClass('moodGood');
+                }
+
           });
 
 

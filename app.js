@@ -29,7 +29,6 @@ var db = [
     nickname: "Homer",
     company: "Springfield Nuclear Power Plant",
     email: "hsimpson74@yahoo.com",
-    address: ""
   },
   {
     guid: "a9816058-5e20-4e19-be7a-b9ec320a7a91",
@@ -38,7 +37,6 @@ var db = [
     nickname: "Marge",
     company: "",
     email: "funmom1337@hotmail.com",
-      address: ""
   },
   {
     guid: "ba029c24-2229-4439-a280-452bead4f176",
@@ -47,7 +45,6 @@ var db = [
     nickname: "Comic Book Guy",
     company: "The Android's Dungeon & Baseball Card Shop",
     email: "treknerk1012@comcast.net",
-      address: ""
   },
   {
     guid: "5344717e-5433-49ca-9b71-5fc26ad86abc",
@@ -56,7 +53,6 @@ var db = [
     nickname: "Monty",
     company: "Springfield Solarplex Power",
     email: "",
-    address: ""
   },
   {
     guid: "0e33a96d-a16c-43e2-be5e-1698393e6dbb",
@@ -65,7 +61,6 @@ var db = [
     nickname: "Diamond Joe",
     company: "Mayor of Springfield",
     email: "jquimby@springfield.gov",
-    address: ""
   },
 
     {

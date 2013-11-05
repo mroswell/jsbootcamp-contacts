@@ -54,14 +54,18 @@ module.exports = function (grunt) {
 
             restart: {
                 files: ['app.js'],
-                tasks: ['server']
-            },
-            livereload: {
+                tasks: ['server'],
                 options: {
                     livereload: 3000
                 }
             }
-        }
+        },
+        nodemon: {
+             dev: {
+
+             }
+        },
+
     });
 
 
@@ -92,9 +96,11 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['mocha_phantomjs']);
     grunt.registerTask('test', ['mocha_phantomjs']);
     grunt.registerTask('reload', ['mocha-contrib-watch']);
-    grunt.registerTask('server', 'Start app.js', function(){
-        grunt.log.writeln('starting app.js server');
-        require('./app.js');
+    grunt.registerTask('restart', ['mocha-contrib-watch']);
+
+    //grunt.registerTask('server', 'Start app.js', function(){
+    //    grunt.log.writeln('starting app.js server');
+    //    require('./app.js');
     });
 
 
